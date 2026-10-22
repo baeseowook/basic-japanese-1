@@ -1,0 +1,6 @@
+{
+  "name": "일본어 형용사·동사 활용 마스터 (회화 집중 2시간 과외 커리큘럼)",
+  "description": "1:1 일본어 개인 과외를 위한 2시간 완성 형용사·동사 활용 및 실전 회화 집중 트레이닝 학습지 & 인터랙티브 러닝 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

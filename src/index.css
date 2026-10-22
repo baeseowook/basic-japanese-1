@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+  }
+
+  .font-mincho {
+    font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  }
+
+  .font-serif-jp {
+    font-family: "Noto Serif JP", "Shippori Mincho", serif;
+  }
+
+  .font-gothic {
+    font-family: "Noto Sans JP", "Pretendard", sans-serif;
+  }
+
+  ruby.ruby-align {
+    ruby-align: center;
+    ruby-position: over;
+    display: inline-ruby;
+  }
+
+  ruby.ruby-align rt {
+    user-select: none;
+    font-size: 0.52em;
+    line-height: 1;
+    text-align: center;
+    display: ruby-text;
+    font-weight: 500;
+  }
+}
+
+/* Textbook aesthetics */
+.bg-textbook-paper {
+  background-color: #FAF6EE;
+  background-image: 
+    radial-gradient(#E8DEC8 0.75px, transparent 0.75px),
+    radial-gradient(#E8DEC8 0.75px, #FAF6EE 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.textbook-card {
+  background-color: #FFFDF9;
+  border: 1px solid #EADBCC;
+  box-shadow: 0 2px 8px -2px rgba(90, 70, 50, 0.07), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.textbook-ruled {
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(215, 195, 175, 0.35) 28px);
+}
+
+.hanko-stamp {
+  position: relative;
+  border: 2px solid #DC2626;
+  color: #DC2626;
+  border-radius: 9999px;
+  font-weight: 800;
+  text-align: center;
+  transform: rotate(-4deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.15);
+}
+
+.textbook-marker {
+  background: linear-gradient(104deg, rgba(254, 240, 138, 0) 0.9%, rgba(254, 240, 138, 0.85) 2.4%, rgba(254, 240, 138, 0.6) 90%, rgba(254, 240, 138, 0) 98%);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+@media print {
+  @page {
+    margin: 1.2cm;
+    size: A4 portrait;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header, footer, nav, button.print\\:hidden, .print\\:hidden {
+    display: none !important;
+  }
+}
